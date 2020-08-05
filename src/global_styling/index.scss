@@ -1,5 +1,6 @@
 // Imported global styling from EUI
-@import '~@elastic/eui/src/themes/eui-amsterdam/global_styling/index';
+// @import '~@elastic/eui/src/themes/eui-amsterdam/global_styling/index';
+@import '~@elastic/eui/src/global_styling/index';
 
 // We use the fixed header from EUI so need this mixin
 body {
@@ -8,3 +9,7 @@ body {
 
 // Site specific global styling
 @import './mixins/index';
+
+.euiDescriptionList.euiDescriptionList--column > * {
+  margin-top: 8px !important;
+}

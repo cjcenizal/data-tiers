@@ -1,8 +1,16 @@
-import React from 'react';
+
+import React, { useState, Fragment } from 'react';
 import MyComponent from '../components/my_component';
 import {
+  EuiBasicTable,
   EuiButton,
+  EuiButtonIcon,
   EuiCode,
+  EuiDescriptionList,
+  EuiFlexGroup,
+  EuiFlexItem,
+  EuiHealth,
+  EuiIcon,
   EuiPage,
   EuiPageBody,
   EuiPageContent,
@@ -11,67 +19,55 @@ import {
   EuiPageContentHeaderSection,
   EuiPageHeader,
   EuiPageHeaderSection,
+  EuiPanel,
+  EuiSpacer,
+  EuiStat,
+  EuiSwitch,
   EuiText,
   EuiTitle,
+  EuiCard,
 } from '@elastic/eui';
 
-export default () => (
-  <EuiPage restrictWidth>
-    <EuiPageBody>
-      <EuiPageHeader>
-        <EuiPageHeaderSection>
-          <EuiTitle size="l">
-            <h1>Elastic&apos;s Gatsby EUI Starter</h1>
-          </EuiTitle>
-        </EuiPageHeaderSection>
-        <EuiPageHeaderSection>
-          <EuiButton
-            iconType="logoGithub"
-            href="https://github.com/elastic/gatsby-eui-starter"
-            fill>
-            Open in Github
-          </EuiButton>
-        </EuiPageHeaderSection>
-      </EuiPageHeader>
-      <EuiPageContent>
-        <EuiPageContentHeader>
-          <EuiPageContentHeaderSection>
-            <EuiTitle>
-              <h2>Getting started</h2>
+import { DataStreams } from './data_streams';
+import { Cluster } from './cluster';
+import { IlmDefaults } from './ilm_defaults';
+import { IlmWizard } from './ilm_wizard';
+
+export default () => {
+  return (
+    <EuiPage restrictWidth>
+      <EuiPageBody>
+        <EuiPageHeader>
+          <EuiPageHeaderSection>
+            <EuiTitle size="l">
+              <h1>Data Tiers prototypes</h1>
             </EuiTitle>
-          </EuiPageContentHeaderSection>
-          <EuiPageContentHeaderSection />
-        </EuiPageContentHeader>
-        <EuiPageContentBody>
-          <EuiText>
-            <p>
-              This Gatsby EUI Starter is intended to help you quickly build and
-              deploy prototypes for Kibana apps with the EUI library.
-            </p>
-            <h3>Clone the project</h3>
-            <p>
-              To use this starter, simply run{' '}
-              <EuiCode>
-                gatsby new my-app https://github.com/elastic/gatsby-eui-starter
-              </EuiCode>
-              . Then <EuiCode>cd my-app</EuiCode> and start editing.
-            </p>
-            <h3>Running locally</h3>
-            <p>
-              <EuiCode>gatsby develop</EuiCode>
-            </p>
-            <h3>Deploying</h3>
-            <p>
-              Make sure that your repo has a <EuiCode>gh-pages</EuiCode> branch
-              setup and that Github Pages is enabled in settings.
-            </p>
-            <p>
-              <EuiCode>yarn deploy</EuiCode>
-            </p>
-            <MyComponent />
-          </EuiText>
-        </EuiPageContentBody>
-      </EuiPageContent>
-    </EuiPageBody>
-  </EuiPage>
-);
+          </EuiPageHeaderSection>
+        </EuiPageHeader>
+
+        <EuiPageContent>
+          <DataStreams />
+        </EuiPageContent>
+
+        <EuiSpacer />
+
+        <EuiPageContent>
+          <Cluster />
+        </EuiPageContent>
+
+        <EuiSpacer />
+
+        <EuiPageContent>
+          <IlmDefaults />
+        </EuiPageContent>
+
+        <EuiSpacer />
+
+        <EuiPageContent>
+          <IlmWizard />
+        </EuiPageContent>
+      </EuiPageBody>
+    </EuiPage>
+  );
+};
+
