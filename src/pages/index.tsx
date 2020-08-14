@@ -45,6 +45,7 @@ export default () => {
           </EuiPageHeaderSection>
         </EuiPageHeader>
 
+        {/*
         <EuiPageContent>
           <DataStreams />
         </EuiPageContent>
@@ -62,7 +63,7 @@ export default () => {
         </EuiPageContent>
 
         <EuiSpacer />
-
+        */}
         <EuiPageContent>
           <IlmWizard />
         </EuiPageContent>
