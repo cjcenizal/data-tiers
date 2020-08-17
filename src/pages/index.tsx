@@ -28,10 +28,10 @@ import {
   EuiCard,
 } from '@elastic/eui';
 
-import { DataStreams } from './data_streams';
-import { Cluster } from './cluster';
-import { IlmDefaults } from './ilm_defaults';
-import { IlmWizard } from './ilm_wizard';
+import { DataStreams } from '../components/data_streams';
+import { Cluster } from '../components/cluster';
+import { IlmDefaults } from '../components/ilm_defaults';
+import { IlmWizard } from '../components/ilm_wizard';
 
 export default () => {
   return (
