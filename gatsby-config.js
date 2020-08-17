@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/gatsby-eui-starter',
+  pathPrefix: '/data-tiers',
   siteMetadata: {
     title: 'Gatsby EUI Starter',
     description:

@@ -45,7 +45,20 @@ export default () => {
           </EuiPageHeaderSection>
         </EuiPageHeader>
 
-        {/*
+        <EuiSpacer />
+
+        <EuiPageContent>
+          <IlmDefaults />
+        </EuiPageContent>
+
+        <EuiSpacer />
+
+        <EuiPageContent>
+          <IlmWizard />
+        </EuiPageContent>
+
+        <EuiSpacer />
+
         <EuiPageContent>
           <DataStreams />
         </EuiPageContent>
@@ -54,18 +67,6 @@ export default () => {
 
         <EuiPageContent>
           <Cluster />
-        </EuiPageContent>
-
-        <EuiSpacer />
-
-        <EuiPageContent>
-          <IlmDefaults />
-        </EuiPageContent>
-
-        <EuiSpacer />
-        */}
-        <EuiPageContent>
-          <IlmWizard />
         </EuiPageContent>
       </EuiPageBody>
     </EuiPage>

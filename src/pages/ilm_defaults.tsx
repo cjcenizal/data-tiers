@@ -125,6 +125,15 @@ export const IlmDefaults = () => {
           <EuiTitle>
             <h2>Index lifecycle policies</h2>
           </EuiTitle>
+
+          <EuiText>
+            <p>
+              Let's elevate the prominence of the default policies to make it easier for users
+              to follow best practices. Let's hide the custom policies so that advanced users
+              can still access them, but they don't compete with the default policies that address 
+              80% of use cases.
+            </p>
+          </EuiText>
         </EuiPageContentHeaderSection>
         <EuiPageContentHeaderSection />
       </EuiPageContentHeader>

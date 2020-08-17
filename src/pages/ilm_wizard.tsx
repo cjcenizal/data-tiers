@@ -190,6 +190,13 @@ export const IlmWizard = () => {
           <EuiTitle>
             <h2>Create index lifecycle policy</h2>
           </EuiTitle>
+          <EuiText>
+            <p>
+              How do we emphasize the sequential nature of data tiers in the UI? How do we help the
+              user differentiate between the steps? How do we give them an overview of how this
+              policy behaves?
+            </p>
+          </EuiText>
         </EuiPageContentHeaderSection>
         <EuiPageContentHeaderSection />
       </EuiPageContentHeader>

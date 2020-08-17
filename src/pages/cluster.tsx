@@ -122,6 +122,13 @@ export const Cluster = () => {
           <EuiTitle>
             <h2>Cluster supervisor</h2>
           </EuiTitle>
+
+          <EuiText>
+            <p>
+              What does the cluster state look like through the lens of data tiers? What would users 
+              find useful about this?
+            </p>
+          </EuiText>
         </EuiPageContentHeaderSection>
         <EuiPageContentHeaderSection />
       </EuiPageContentHeader>

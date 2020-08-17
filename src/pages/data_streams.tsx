@@ -105,9 +105,9 @@ export const DataStreams = () => {
       } = item;
      
       itemIdToExpandedRowMapValues[item.name] = (
-        <>
+        <div style={{ 'width': '100%' }}>
           <EuiTitle>
-            <h2>Hot-warm policy</h2>
+            <h2><a href="#">Hot-warm policy</a></h2>
           </EuiTitle>
 
           <EuiSpacer size="s" />
@@ -162,7 +162,7 @@ export const DataStreams = () => {
               </EuiCard>
             </EuiFlexItem>
           </EuiFlexGroup>
-        </>
+        </div>
       );
     }
     setItemIdToExpandedRowMap(itemIdToExpandedRowMapValues);
@@ -195,26 +195,33 @@ export const DataStreams = () => {
   ];
 
   return (
-        <>
-          <EuiPageContentHeader>
-            <EuiPageContentHeaderSection>
-              <EuiTitle>
-                <h2>Data streams</h2>
-              </EuiTitle>
-            </EuiPageContentHeaderSection>
-            <EuiPageContentHeaderSection />
-          </EuiPageContentHeader>
+    <>
+      <EuiPageContentHeader>
+        <EuiPageContentHeaderSection>
+          <EuiTitle>
+            <h2>Data streams</h2>
+          </EuiTitle>
 
-          <EuiPageContentBody>
-            <EuiBasicTable
-              items={items}
-              itemId="name"
-              itemIdToExpandedRowMap={itemIdToExpandedRowMap}
-              isExpandable={true}
-              columns={columns}
-            />
-          </EuiPageContentBody>
-        </>
+          <EuiText>
+            <p>
+              What do data tiers look like in the context of data streams? What would users find
+              useful about this?
+            </p>
+          </EuiText>
+        </EuiPageContentHeaderSection>
+        <EuiPageContentHeaderSection />
+      </EuiPageContentHeader>
+
+      <EuiPageContentBody>
+        <EuiBasicTable
+          items={items}
+          itemId="name"
+          itemIdToExpandedRowMap={itemIdToExpandedRowMap}
+          isExpandable={true}
+          columns={columns}
+        />
+      </EuiPageContentBody>
+    </>
   );
 };
 
