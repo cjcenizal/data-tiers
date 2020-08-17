@@ -34,7 +34,6 @@ import {
 const Policy = ({ title, tiers, indices }) => {
   const hasTier = (tier, color) => {
     if (tiers.includes(tier)) {
-      console.log('has', tier, color)
       return color;
     }
     return 'hollow';
